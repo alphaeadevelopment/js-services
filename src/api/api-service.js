@@ -1,5 +1,6 @@
 /* eslint-disable arrow-body-style */
 import Rx from 'rx'
+import fetch from 'fetch-everywhere';
 import getRequestParameters from './get-request-parameters'
 import isPassThroughError from './is-pass-through-error'
 import toError from './to-error'
@@ -9,7 +10,6 @@ import configurationService from '../configuration'
 import defaultGetEndpoint from './get-endpoint.js'
 import extractBody from './extract-body'
 import replacePlaceholders from './replace-placeholders'
-import fetch from 'whatwg-fetch';
 
 const GET = 'GET'
 const POST = 'POST'
@@ -18,6 +18,7 @@ const TIMEOUT = 'timeout'
 const createRequest = (
   maxResponseTime, getEndpoint, configuration,
 ) => (uri, method, body) => { // eslint-disable-line no-unused-vars
+  console.log('doing fetch');
   const requestUri = getEndpoint(configuration.apiBaseUri, uri)
   const options = ({ method })
   if (body) options.body = JSON.stringify(body)

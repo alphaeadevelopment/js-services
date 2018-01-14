@@ -16,7 +16,7 @@ const fetchStub = sinon.stub()
 const extractBodyStub = sinon.stub()
 
 const ApiService = inject({
-  'whatwg-fetch': fetchStub,
+  'fetch-everywhere': fetchStub,
   './extract-body': extractBodyStub,
 }).default
 const apiBaseUri = '/base'
@@ -29,6 +29,13 @@ const testService = ({ getEndpoint, configuration } = {}) => (
 
 
 describe('api service', () => {
+  // before(() => {
+  //   oldFetch = fetch;
+  //   console.log(JSON.stringify(oldFetch) === JSON.stringify(fetch));
+  // })
+  // after(() => {
+  //   fetch = oldFetch;
+  // })
   describe('get()', () => {
     beforeEach(() => {
       fetchStub.reset()

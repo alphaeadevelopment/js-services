@@ -23,8 +23,7 @@
     "moment": "^2.20.1",
     "react": "^16.2.0",
     "rx": "^4.1.0",
-    "webpack": "^3.10.0",
-    "whatwg-fetch": "^2.0.3"
+    "webpack": "^3.10.0"
   },
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
