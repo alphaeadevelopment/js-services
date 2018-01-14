@@ -19,7 +19,7 @@ const createRequest = (
   maxResponseTime, getEndpoint, configuration,
 ) => (uri, method, body) => { // eslint-disable-line no-unused-vars
   console.log('doing fetch');
-  const requestUri = getEndpoint(configuration.apiBaseUri, uri)
+  const requestUri = getEndpoint(configuration.apiBaseUri || '', uri)
   const options = ({ method })
   if (body) options.body = JSON.stringify(body)
   const requestParameters = getRequestParameters(options)
