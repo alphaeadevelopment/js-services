@@ -1,3 +1,3 @@
-const isPassThroughError = () => false
+const isPassThroughError = () => false;
 
-export default isPassThroughError
+export default isPassThroughError;

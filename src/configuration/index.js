@@ -1,3 +1,3 @@
-import ConfigurationService from './configuration-service'
+import ConfigurationService from './configuration-service';
 
-export default ConfigurationService
+export default ConfigurationService;

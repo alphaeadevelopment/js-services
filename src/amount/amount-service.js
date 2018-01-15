@@ -1,9 +1,9 @@
-import numberService from '../number'
+import numberService from '../number';
 
-const amountFormatter = numberService.formatter(2)
+const amountFormatter = numberService.formatter(2);
 
 const AmountService = {
   format: n => amountFormatter(n),
-}
+};
 
-export default AmountService
+export default AmountService;

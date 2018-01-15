@@ -1,12 +1,11 @@
 class ConfigurationService {
-
   getConfiguration() {
-    return this.config || {}
+    return this.config || {};
   }
 
   setConfiguration(config = {}) {
-    this.config = config
+    this.config = config;
   }
 }
 
-export default new ConfigurationService()
+export default new ConfigurationService();

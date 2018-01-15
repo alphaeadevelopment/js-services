@@ -1,1 +1,1 @@
-export { default } from './number-service'
+export { default } from './number-service';

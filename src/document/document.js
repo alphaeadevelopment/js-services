@@ -1,3 +1,2 @@
-
-export default document // eslint-disable-line no-undef
+export default document; // eslint-disable-line no-undef
 

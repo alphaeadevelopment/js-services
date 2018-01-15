@@ -1,4 +1,4 @@
 /* eslint-disable no-var */
-var DateService = require('./date-service')
+var DateService = require('./date-service');
 
-module.exports = DateService
+module.exports = DateService;

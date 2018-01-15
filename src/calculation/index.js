@@ -1,3 +1,3 @@
-import calculationService from './calculation-service'
+import calculationService from './calculation-service';
 
-export default calculationService
+export default calculationService;

@@ -1,6 +1,6 @@
 /* eslint-disable no-var */
-import ApiService from './api-service'
-import StubApiService from './stub/stub-api-service'
+import ApiService from './api-service';
+import StubApiService from './stub/stub-api-service';
 
 let service = new ApiService();
 if (process.env.NODE_ENV !== 'production') {
@@ -8,6 +8,8 @@ if (process.env.NODE_ENV !== 'production') {
     service,
     null,
     { artificialDelay: 1000 },
-  )
+  );
 }
-export default service;
+const theService = service;
+
+export default theService;

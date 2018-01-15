@@ -1,1 +1,1 @@
-export { default } from './amount-service'
+export { default } from './amount-service';

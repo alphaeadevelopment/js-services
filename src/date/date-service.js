@@ -1,18 +1,18 @@
-import moment from 'moment'
+import moment from 'moment';
 
-class DateService {
+const DateService = {
   currentDate() {
-    return moment()
-  }
+    return moment();
+  },
   dateFromString(str, format) {
-    return moment(str, format)
-  }
+    return moment(str, format);
+  },
   dateToString(date, format) {
-    return moment(date).format(format)
-  }
+    return moment(date).format(format);
+  },
   daysSince(date, format) {
-    return moment().diff(this.dateFromString(date, format), 'days')
-  }
-}
+    return moment().diff(this.dateFromString(date, format), 'days');
+  },
+};
 
-export default new DateService()
+export default new DateService();

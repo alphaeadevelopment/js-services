@@ -1,5 +1,5 @@
 const passThroughError = r => ({
   status: r.status,
-})
+});
 
-export default passThroughError
+export default passThroughError;

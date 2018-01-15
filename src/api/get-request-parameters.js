@@ -4,5 +4,5 @@ const getRequestParameters = params => ({
     'Accept': 'application/json',
     'Content-Type': 'application/json',
   },
-})
-export default getRequestParameters
+});
+export default getRequestParameters;
