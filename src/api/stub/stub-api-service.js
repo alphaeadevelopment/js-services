@@ -8,7 +8,7 @@ const GET = 'GET';
 const POST = 'POST';
 
 const getRequest = (apiService, stubProvider, options = {}) => (uri, method, body) => {
-  const stub = stubProvider.getStubData(uri);
+  const stub = stubProvider.getStubData(uri, method, body);
 
   if (!stub) {
     return apiService.getRequest()(uri, method, body);
