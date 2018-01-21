@@ -4,7 +4,9 @@
   "description": "Reusable js services",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha-webpack --webpack-config config/webpack.mocha.js --require mocha.setup.js --glob \"*.spec.js*\" --reporter mochawesome --reporter-options reportDir=mochawesome-report-unit --recursive src --watch"
+    "test": "mocha-webpack --webpack-config config/webpack.mocha.js --require mocha.setup.js --glob \"*.spec.js*\" --reporter mochawesome --reporter-options reportDir=mochawesome-report-unit --recursive src --watch",
+    "deploy": "npm version patch && git push --tags && npm run build && npm publish",
+    "build": "NODE_ENV=production webpack"
   },
   "keywords": [],
   "author": "Graham King <gking2224@gmail.com>",
