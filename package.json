@@ -11,7 +11,7 @@
   "author": "Graham King <gking2224@gmail.com>",
   "license": "ISC",
   "publishConfig": {
-    "registry": "http://nexus.alphaea.uk/repository/npm-releases/"
+    "registry": "http://proliant:8081/repository/npm-releases/"
   },
   "dependencies": {
     "babel-loader": "^7.1.2",
