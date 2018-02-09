@@ -13,6 +13,8 @@ import replacePlaceholders from './replace-placeholders';
 
 const GET = 'GET';
 const POST = 'POST';
+const PUT = 'PUT';
+const DELETE = 'DELETE';
 const TIMEOUT = 'timeout';
 
 const createRequest = (
@@ -66,5 +68,13 @@ export default class ApiService {
 
   post(uri, body) {
     return this.getRequest()(uri, POST, body);
+  }
+
+  put(uri, body) {
+    return this.getRequest()(uri, PUT, body);
+  }
+
+  delete(uri, params = {}, body) {
+    return this.getRequest()(replacePlaceholders(uri, params), DELETE, body);
   }
 }
