@@ -74,7 +74,7 @@ export default class ApiService {
     return this.getRequest()(uri, PUT, body);
   }
 
-  delete(uri, params = {}, body) {
-    return this.getRequest()(replacePlaceholders(uri, params), DELETE, body);
+  delete(uri, body) {
+    return this.getRequest()(uri, DELETE, body);
   }
 }

@@ -6,6 +6,8 @@ const defaultOptions = {
 };
 const GET = 'GET';
 const POST = 'POST';
+const PUT = 'PUT';
+const DELETE = 'DELETE';
 
 const getRequest = (apiService, stubProvider, options = {}) => (uri, method, body) => {
   const stub = stubProvider.getStubData(uri, method, body);
@@ -35,5 +37,15 @@ export default class StubApiService {
   post(uri, body) {
     const requestFunc = getRequest(this.realService, this.stubProvider, this.options);
     return requestFunc(uri, POST, body);
+  }
+
+  put(uri, body) {
+    const requestFunc = getRequest(this.realService, this.stubProvider, this.options);
+    return requestFunc(uri, PUT, body);
+  }
+
+  delete(uri, body) {
+    const requestFunc = getRequest(this.realService, this.stubProvider, this.options);
+    return requestFunc(uri, DELETE, body);
   }
 }
