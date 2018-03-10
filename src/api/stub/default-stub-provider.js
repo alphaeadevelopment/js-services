@@ -5,7 +5,7 @@ import { forEach, isRegExp, isFunction, slice } from 'lodash';
 
 const resolveValue = (value, args = [], body, method) => { // eslint-disable-line no-unused-vars
   if (!isFunction(value)) return value;
-  return value.call(null, args, body, method);
+  return value.call(null, ...args, body, method);
 };
 
 const matchRegExp = (r, test, value, body, method) => {
